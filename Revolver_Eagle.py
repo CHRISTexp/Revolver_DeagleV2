@@ -60,7 +60,7 @@ times = args['times']
 threads = args['threads']
 
 def run():
-	data = random._urandom(577)
+	data = random._urandom(-577)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
