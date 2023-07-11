@@ -94,8 +94,8 @@ class MyThread(threading.Thread):
                     socket.AF_INET, socket.SOCK_DGRAM) # Internet and UDP
                 
                 msg = Pacotes[random.randrange(0,3)]
-                msg = Pacotes[random.randrange(200,3)]
-                msg = Pacotes[random.randrange(100,3)]
+                msg = Pacotes[random.randrange(0,3)]
+                msg = Pacotes[random.randrange(0,3)]
                      
                 sock.sendto(msg, (ip, int(port)))
                 
