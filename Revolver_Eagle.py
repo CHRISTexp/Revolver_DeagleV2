@@ -122,7 +122,7 @@ if __name__ == '__main__':
          os.system('cls' if os.name == 'nt' else 'clear')
 if __name__ == '__main__':
     try:
-     for x in range(100000):                                    
+     for x in range(100):                                    
             mythread = MyThread()  
             mythread.start()                                  
             time.sleep(.1)    
