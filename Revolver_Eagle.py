@@ -51,13 +51,7 @@ ap.add_argument("-t", "--times", type=int, default=50000, help="Packets per one 
 ap.add_argument("-th", "--threads", type=int, default=50000, help="Threads")
 args = vars(ap.parse_args())
 
-print("
-░██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
-██╔════╝░██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
-██║░░██╗░██║░░░░░██║░░██║██║░░╚═╝█████═╝░
-██║░░╚██╗██║░░░░░██║░░██║██║░░██╗██╔═██╗░
-╚██████╔╝███████╗╚█████╔╝╚█████╔╝██║░╚██╗
-░╚═════╝░╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝")
+print("DDOS-ATTACK-TCP-UDP")
 print("#-- TCP/UDP FLOOD --#")
 ip = args['ip']
 port = args['port']
